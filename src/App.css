@@ -5,7 +5,7 @@
 }
 
 .App {
-  background-image: url('./images/swapi-stars.png');
+  background-image: url('./images/swapi-stars.svg');
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
