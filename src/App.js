@@ -8,8 +8,15 @@ class App extends Component {
       user: {},
       movies: [],
       currentMovie: {},
-      currentCharacters: []
+      currentCharacters: [],
+      favoriteCharacters: []
     }
+  }
+
+  updateUserState = (userObj) => {
+    this.setState({
+      user: userObj
+    })
   }
 
   render() {
