@@ -21,7 +21,13 @@ class App extends Component {
 
   render() {
     return(
-      <h1>Hello</h1>
+      <section className='App'>
+        <h1><span className='yellow-text'>SW</span>API</h1>
+        <input />
+        <input />
+        <button>SUBMIT</button>
+
+      </section>
     )
   }
 
