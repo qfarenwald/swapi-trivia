@@ -12,7 +12,7 @@ class Form extends Component {
     this.props = props;
   }
 
-  updateUserInfo = (event, key) => {
+  updateFormState = (event, key) => {
     this.setState({ [key]: event.target.value})
   }
 
@@ -25,21 +25,21 @@ class Form extends Component {
           placeholder="Name"
           name="name"
           value={this.state.name}
-          onChange={event => this.updateUserInfo(event, 'name')} 
+          onChange={event => this.updateFormState(event, 'name')} 
         />
         <input
           type="text"
           placeholder="Favorite Quote"
           name="quote"
           value={this.state.quote}
-          onChange={event => this.updateUserInfo(event, 'quote')} 
+          onChange={event => this.updateFormState(event, 'quote')} 
         />
         <input
           type="text"
           placeholder="Your Status"
           name="status"
           value={this.state.status}
-          onChange={event => this.updateUserInfo(event, 'status')} 
+          onChange={event => this.updateFormState(event, 'status')} 
         />
         <button onClick={() => {this.props.updateUserState(this.state)}}>Submit</button>
       </header>
