@@ -16,6 +16,19 @@ class Form extends Component {
     this.setState({ [key]: event.target.value})
   }
 
+  buttonErrorHandling = () => {
+    const stateValues = Object.values(this.state);
+    let checkValues = true;
+    stateValues.forEach(value => {
+      if (value === '') {
+        checkValues = false;
+      }
+    })
+    if (checkValues === true) {
+      this.props.updateUserState(this.state)
+    }
+  }
+
   render() {
     return (
       <header>
@@ -41,7 +54,7 @@ class Form extends Component {
           value={this.state.status}
           onChange={event => this.updateFormState(event, 'status')} 
         />
-        <button onClick={() => {this.props.updateUserState(this.state)}}>Submit</button>
+        <button onClick={this.buttonErrorHandling}>Submit</button>
       </header>
     )
   }
