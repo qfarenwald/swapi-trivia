@@ -2,6 +2,7 @@ import React from 'react';
 import './Movie.css';
 
 const Movie = (props) => {
+
   return (
     <section className="movie-card">
       <h3>{props.title}</h3>

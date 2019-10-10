@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
+import { getMovies, getCharacters } from '../../apiCalls/apiCalls';
 
 class App extends Component {
   constructor() {
@@ -15,22 +16,13 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-      fetch('https://swapi.co/api/films/')
-        .then(res => res.json())
-        .then(films => {
-          return films.results.map((film) => {
-            const newDate = film.release_date.split('-')[0]
-            return {
-              title: film.title,
-              episode_id: film.episode_id,
-              release_date: newDate
-            }
-          })
-        })
-        .then(films => this.setState({movies: films}))
-        .catch(error => console.error('error'))
-    }
+componentDidMount = () => {
+  getMovies()
+    .then(films => this.setState({movies: films}))
+    .catch(error => console.error('error'))
+
+  getCharacters()
+}
 
   updateUserState = (userObj) => {
     this.setState({
