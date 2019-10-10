@@ -19,6 +19,7 @@ class App extends Component {
 
 componentDidMount = () => {
   getMovies('https://swapi.co/api/films/')
+    .then(films => console.log(films))
     .then(films => this.setState({movies: films}))
     .catch(error => console.error('error'))
 
