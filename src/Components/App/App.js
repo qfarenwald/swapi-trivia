@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
+import MoviesContainer from '../MoviesContainer/MoviesContainer';
 
 class App extends Component {
   constructor() {
@@ -41,7 +42,7 @@ class App extends Component {
     return(
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
-        {this.state.user ? <h2>MOVIES</h2> : <Form updateUserState={this.updateUserState}/>}
+        {this.state.user ? <MoviesContainer movies={this.state.movies}/> : <Form updateUserState={this.updateUserState}/>}
       </section>
     )
   }
