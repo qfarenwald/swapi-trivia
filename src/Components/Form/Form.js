@@ -30,8 +30,7 @@ class Form extends Component {
 
   render() {
     return (
-      <header>
-        <h1>Enter Your Information!</h1>
+      <main className="form">
         <p style={{visibility: this.state.isValid ? 'hidden' : 'visible'}}>Please enter values for each input!</p>
         <input
           type="text"
@@ -45,17 +44,16 @@ class Form extends Component {
           placeholder="Favorite Quote"
           name="quote"
           value={this.state.quote}
-          onChange={event => this.updateFormState(event, 'quote')} 
+          onChange={event => this.updateFormState(event, 'quote')}
         />
         <input
-          type="text"
-          placeholder="Your Status"
+          type="radio"
           name="status"
           value={this.state.status}
-          onChange={event => this.updateFormState(event, 'status')} 
+          onChange={event => this.updateFormState(event, 'status')}
         />
         <Link to={this.state.isValid ? "/movies" : "/"}><button>Submit</button></Link>
-      </header>
+      </main>
     )
   }
 }
