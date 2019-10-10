@@ -16,5 +16,5 @@ export const getMovies = () => {
 export const getCharacters = () => {
   return fetch('https://swapi.co/api/people/')
     .then(res => res.json())
-    .then(character => console.log(character))
+    .then(characters => console.log(characters))
 }
