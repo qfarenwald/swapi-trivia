@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with correct data 1`] = `
+<section
+  className="App"
+>
+  <h1>
+    <span
+      className="yellow-text"
+    >
+      SW
+    </span>
+    API
+  </h1>
+  <Form
+    updateUserState={[Function]}
+  />
+</section>
+`;

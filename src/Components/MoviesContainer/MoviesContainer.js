@@ -3,6 +3,7 @@ import Movie from '../Movie/Movie'
 import './MoviesContainer.css';
 
 const MoviesContainer = ( {movies} ) => {
+  console.log(movies)
   return (
     movies.map((movie) => {
       return <Movie
