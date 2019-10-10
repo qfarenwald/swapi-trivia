@@ -3,6 +3,7 @@ import './App.css';
 import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import { getMovies, getCharacters } from '../../apiCalls/apiCalls';
+import  { Route, Link } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -34,7 +35,8 @@ componentDidMount = () => {
     return(
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
-        {this.state.user ? <MoviesContainer movies={this.state.movies}/> : <Form updateUserState={this.updateUserState}/>}
+        <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>}/>
+        <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies}/>}/>
       </section>
     )
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
+import { Link } from 'react-router-dom';
 
 class Form extends Component {
   constructor(props) {
@@ -7,25 +8,21 @@ class Form extends Component {
     this.state = {
       name: '',
       quote: '',
-      status: ''
+      status: '',
+      isValid: false
     }
     this.props = props;
   }
 
   updateFormState = (event, key) => {
     this.setState({ [key]: event.target.value})
+    this.errorHandling();
   }
 
-  buttonErrorHandling = () => {
-    const stateValues = Object.values(this.state);
-    let checkValues = true;
-    stateValues.forEach(value => {
-      if (value === '') {
-        checkValues = false;
-      }
-    })
-    if (checkValues === true) {
-      this.props.updateUserState(this.state)
+  errorHandling = () => {
+    if ((this.state.name !== '') && (this.state.quote !== '') && (this.state.status !== '')) {
+      this.setState(() => ({ isValid: true}))
+      this.props.updateUserState(this.state);
     }
   }
 
@@ -38,7 +35,7 @@ class Form extends Component {
           placeholder="Name"
           name="name"
           value={this.state.name}
-          onChange={event => this.updateFormState(event, 'name')} 
+          onChange={event => this.updateFormState(event, 'name')}
         />
         <input
           type="text"
@@ -54,7 +51,7 @@ class Form extends Component {
           value={this.state.status}
           onChange={event => this.updateFormState(event, 'status')} 
         />
-        <button onClick={this.buttonErrorHandling}>Submit</button>
+        <Link to={this.state.isValid ? "/movies" : "/"}><button>Submit</button></Link>
       </header>
     )
   }
