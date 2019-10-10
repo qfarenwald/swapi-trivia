@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie should match snapshot with correct data 1`] = `
+<section
+  className="movie-card"
+>
+  <h3>
+    Empire Strikes Back
+  </h3>
+  <h4>
+    EPISODE 
+    4
+  </h4>
+  <h4>
+    RELEASE
+    1998
+  </h4>
+  <div
+    className="view-charac"
+  >
+    <h5>
+      VIEW CHARACTERS
+    </h5>
+  </div>
+</section>
+`;
