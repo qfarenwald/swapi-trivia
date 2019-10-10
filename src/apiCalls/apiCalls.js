@@ -1,5 +1,5 @@
-export const getMovies = () => {
-    return fetch('https://swapi.co/api/films/')
+export const getMovies = (moviesData) => {
+    return fetch(moviesData)
       .then(res => res.json())
       .then(films => {
         return films.results.map((film) => {
@@ -13,8 +13,8 @@ export const getMovies = () => {
       })
   }
 
-export const getCharacters = () => {
-  return fetch('https://swapi.co/api/people/')
+export const getCharacters = (characData) => {
+  return fetch(characData)
     .then(res => res.json())
     .then(characters => console.log(characters))
 }

@@ -13,7 +13,7 @@ const MoviesContainer = ( {movies} ) => {
     })
 
   return (
-    <main>
+    <main className="movies-container">
       {moviesCont}
     </main>
   )

@@ -17,11 +17,11 @@ class App extends Component {
   }
 
 componentDidMount = () => {
-  getMovies()
+  getMovies('https://swapi.co/api/films/')
     .then(films => this.setState({movies: films}))
     .catch(error => console.error('error'))
 
-  getCharacters()
+  getCharacters('https://swapi.co/api/people/')
 }
 
   updateUserState = (userObj) => {

@@ -1,20 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MoviesContainer should match snapshot with correct data 1`] = `
-Array [
+<main
+  className="movies-container"
+>
   <Movie
     episode_id={4}
     id={4}
     key="4"
     release_date={1977}
     title="A New Hope"
-  />,
+  />
   <Movie
     episode_id={2}
     id={2}
     key="2"
     release_date={2002}
     title="Attack Of The Clones"
-  />,
-]
+  />
+</main>
 `;
