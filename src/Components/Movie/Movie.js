@@ -7,8 +7,8 @@ const Movie = (props) => {
     <section>
       <div className="movie-card">
         <h3>{props.title}</h3>
-        <h4>EPISODE {props.episode_id}</h4>
-        <h4>RELEASE{props.release_date}</h4>
+        <h4><span className="bold-text">EPISODE</span> {props.episode_id}</h4>
+        <h4><span className="bold-text">RELEASE</span> {props.release_date}</h4>
       </div>
       <div className="view-charac">
         <h5>VIEW CHARACTERS</h5>

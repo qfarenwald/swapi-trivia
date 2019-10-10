@@ -16,11 +16,16 @@ h3 {
 }
 
 h4 {
+  font-weight: lighter;
   margin: 5px;
 }
 
 h5 {
   color: #000000;
+}
+
+.bold-text {
+  font-weight: bold;
 }
 
 .view-charac {
