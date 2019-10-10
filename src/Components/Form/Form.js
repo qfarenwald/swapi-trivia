@@ -21,8 +21,10 @@ class Form extends Component {
 
   errorHandling = () => {
     if ((this.state.name !== '') && (this.state.quote !== '') && (this.state.status !== '')) {
-      this.setState(() => ({ isValid: true}))
+      this.setState(() => ({ isValid: true}));
       this.props.updateUserState(this.state);
+    } else {
+      this.setState(() => ({ isValid: false}));
     }
   }
 
@@ -30,6 +32,7 @@ class Form extends Component {
     return (
       <header>
         <h1>Enter Your Information!</h1>
+        <p style={{visibility: this.state.isValid ? 'hidden' : 'visible'}}>Please enter values for each input!</p>
         <input
           type="text"
           placeholder="Name"
