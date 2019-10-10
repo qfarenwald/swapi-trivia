@@ -3,9 +3,7 @@ import Movie from '../Movie/Movie'
 import './MoviesContainer.css';
 
 const MoviesContainer = ( {movies} ) => {
-  console.log(movies)
-  return (
-    movies.map((movie) => {
+    const moviesCont = movies.map((movie) => {
       return <Movie
       title={movie.title}
       episode_id={movie.episode_id}
@@ -13,6 +11,11 @@ const MoviesContainer = ( {movies} ) => {
       id={movie.episode_id}
       key={movie.episode_id}/>
     })
+
+  return (
+    <main>
+      {moviesCont}
+    </main>
   )
 }
 
