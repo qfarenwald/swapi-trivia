@@ -3,8 +3,9 @@ import './App.css';
 import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import Profile from '../Profile/Profile';
-import { getMovies } from '../../apiCalls/apiCalls';
+import Menu from '../Menu/Menu';
 import  { Route, Link } from 'react-router-dom';
+import { getMovies } from '../../apiCalls/apiCalls';
 
 class App extends Component {
   constructor() {
@@ -30,10 +31,16 @@ componentDidMount = () => {
     })
   }
 
+  removeUserState = () => {
+    this.setState({
+      user: null
+    })
+  }
+
   render() {
     return(
       <section className='App'>
-        <h1><span className='yellow-text'>SW</span>API</h1>
+        <Menu removeUserState={this.removeUserState}/>
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>} />
         <Route exact path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
         <Route exact path='/movies' render={() => <h2>MOVIES</h2>} />
