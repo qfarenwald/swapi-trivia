@@ -56,7 +56,7 @@ class Form extends Component {
           </label>
           <label className="input-radio">
             <input type="radio" name="status" value="JEDI" onChange={event => this.updateFormState(event)}/> JEDI
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <label className="input-radio">
             <input type="radio" name="status" value="YODA" onChange={event => this.updateFormState(event)}/> YODA

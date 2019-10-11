@@ -1,40 +1,49 @@
 import React from 'react';
 import './Movie.css';
-// import { getCharacters } from '../../apiCalls/apiCalls';
+import { Component } from 'react'
 
-//movies should be class
+class Movie extends Component {
+  constructor(props) {
+    super()
+    this.state = {
+      characters: []
+    }
+    this.props = props;
+  }
 
-const Movie = (props) => {
-
-// put getCharacters elsewhere
-  const getCharacters = () => {
-    return props.characters.forEach((charac) => {
+  componentDidMount = () => {
+    let fetchedCharacters = [];
+    this.props.characters.forEach((charac) => {
       fetch(charac)
         .then(res => res.json())
         .then(character => {
-            return {
-              homeworld: character.homeworld,
-              species: character.species,
-              films: character.films
-            }
-          })
-        .then(character => console.log(character))
+          return {
+            name: character.name,
+            homeworld: character.homeworld,
+            species: character.species,
+            films: character.films
+          }
+        })
+        .then(character => fetchedCharacters.push(character))
         .catch(error => console.error('error'))
-      })
-    }
+    })
+    this.setState({ characters: fetchedCharacters})
+  }
 
-  return (
-    <section>
-      <div className="movie-card">
-        <h3>{props.title}</h3>
-        <h4><span className="bold-text">EPISODE</span> {props.episode_id}</h4>
-        <h4><span className="bold-text">RELEASE</span> {props.release_date}</h4>
-      </div>
-      <div className="view-charac">
-        <h5 onClick={event => getCharacters()}>VIEW CHARACTERS</h5>
-      </div>
-    </section>
-  )
+  render() {
+    return (
+      <section>
+        <div className="movie-card">
+          <h3>{this.props.title}</h3>
+          <h4><span className="bold-text">EPISODE</span> {this.props.episode_id}</h4>
+          <h4><span className="bold-text">RELEASE</span> {this.props.release_date}</h4>
+        </div>
+        <div className="view-charac">
+          <h5>VIEW CHARACTERS</h5>
+        </div>
+      </section>
+    )
+}
 }
 
 export default Movie;
