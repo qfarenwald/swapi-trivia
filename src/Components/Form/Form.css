@@ -9,13 +9,21 @@ p {
   font-size: 1rem;
 }
 
-input {
+.input-fill {
   color: #FFFFFF;
   font-size: 1rem;
   text-align: center;
   margin: 10px;
   padding: 10px;
   width: 500px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-radio {
+  margin: 10px 30px;
 }
 
 button {
