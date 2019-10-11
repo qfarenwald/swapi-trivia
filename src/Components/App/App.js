@@ -19,10 +19,8 @@ class App extends Component {
 
 componentDidMount = () => {
   getMovies('https://swapi.co/api/films/')
-    .then(films => console.log(films))
     .then(films => this.setState({movies: films}))
     .catch(error => console.error('error'))
-
   getCharacters('https://swapi.co/api/people/')
 }
 
@@ -33,6 +31,7 @@ componentDidMount = () => {
   }
 
   render() {
+    console.log('cat', this.state.movies)
     return(
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
