@@ -1,8 +1,12 @@
 import React from 'react';
-import Movie from '../Movie/Movie'
+import Movie from '../Movie/Movie';
+import Profile from '../Profile/Profile';
 import './MoviesContainer.css';
 
-const MoviesContainer = ( {movies} ) => {
+const MoviesContainer = ( {movies, user} ) => {
+
+  console.log('user', user)
+
     const moviesCont = movies.map((movie) => {
       return <Movie
       title={movie.title}
@@ -13,8 +17,16 @@ const MoviesContainer = ( {movies} ) => {
       characters={movie.characters}/>
     })
 
+    const profile =
+      <Profile
+        name={user.name}
+        quote={user.quote}
+        status={user.status}
+      />
+
   return (
     <main className="movies-container">
+      {profile}
       {moviesCont}
     </main>
   )

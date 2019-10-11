@@ -1,11 +1,12 @@
 import React from 'react';
 import './Profile.css';
 
-const Profile = ( {user} ) => {
-
+const Profile = ( { name, quote, status } ) => {
   return (
     <div>
-      Profile
+      <p>{name}</p>
+      <p>{quote}</p>
+      <p>{status}</p>
     </div>
   )
 }
