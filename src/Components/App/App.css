@@ -19,6 +19,13 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 3rem;
+  letter-spacing: 72px;
+  text-align: right;
+  margin: 0px -30px;
+}
+
 .yellow-text {
   color: #EEDB00;
 }
