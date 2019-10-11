@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
+import Profile from '../Profile/Profile'
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import { getMovies } from '../../apiCalls/apiCalls';
 import  { Route, Link } from 'react-router-dom';
@@ -33,6 +34,7 @@ componentDidMount = () => {
     return(
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
+        <Profile user={this.state.user}/>
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>}/>
         <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} />}/>
       </section>
