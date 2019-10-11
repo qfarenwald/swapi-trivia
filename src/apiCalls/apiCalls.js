@@ -15,7 +15,7 @@ export const getMovies = (moviesData) => {
       })
   }
 
-export const getCharacters = (characData) => {
-  return fetch(characData)
-    .then(res => res.json())
-}
+// export const getCharacters = (characData) => {
+//   return fetch(characData)
+//     .then(res => res.json())
+// }

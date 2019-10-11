@@ -15,9 +15,9 @@ class Form extends Component {
   }
 
   updateFormState = (event) => {
-    this.setState({ [event.target.name]: event.target.value})
-    this.errorHandling();
-    // move ^
+    this.setState({ [event.target.name]: event.target.value}, () => {
+      this.errorHandling()
+    });
   }
 
   errorHandling = () => {
@@ -52,7 +52,7 @@ class Form extends Component {
         <div className="input-container">
           <label className="input-radio">
             <input type="radio" name="status" value="PADAWAN" onChange={event => this.updateFormState(event)}/> PADAWAN
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <label className="input-radio">
             <input type="radio" name="status" value="JEDI" onChange={event => this.updateFormState(event)}/> JEDI
@@ -60,10 +60,10 @@ class Form extends Component {
           </label>
           <label className="input-radio">
             <input type="radio" name="status" value="YODA" onChange={event => this.updateFormState(event)}/> YODA
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
-        <Link to={this.state.isValid ? "/movies" : "/"}><button>Submit</button></Link>
+        <Link to={this.state.isValid ? "/movies" : "/"}><button onClick={() => this.props.updateUserState(this.state)}>Submit</button></Link>
       </main>
     )
   }
