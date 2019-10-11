@@ -1,0 +1,39 @@
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.input-fill {
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  width: 500px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-radio {
+  margin: 10px 30px;
+}
+
+button {
+  background-color: #EEDB00;
+  border: none;
+  font-size: 1rem;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+button:hover {
+
+}

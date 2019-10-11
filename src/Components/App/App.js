@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
-import { getMovies, getCharacters } from '../../apiCalls/apiCalls';
+import { getMovies } from '../../apiCalls/apiCalls';
 import  { Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -19,11 +19,8 @@ class App extends Component {
 
 componentDidMount = () => {
   getMovies('https://swapi.co/api/films/')
-    .then(films => console.log(films))
     .then(films => this.setState({movies: films}))
     .catch(error => console.error('error'))
-
-  getCharacters('https://swapi.co/api/people/')
 }
 
   updateUserState = (userObj) => {
@@ -37,7 +34,7 @@ componentDidMount = () => {
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>}/>
-        <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies}/>}/>
+        <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} />}/>
       </section>
     )
   }
