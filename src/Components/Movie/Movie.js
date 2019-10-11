@@ -10,7 +10,6 @@ class Movie extends Component {
       characters: []
     }
     this.props = props;
-    console.log("These are Movie Props:::", this.props)
   }
 
   componentDidMount = () => {

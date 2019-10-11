@@ -38,6 +38,7 @@ class App extends Component {
         <h1><span className='yellow-text'>SW</span>API</h1>
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>}/>
         <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} updateCurrentCharacters={this.updateCurrentCharacters}/>}/>
+        <Route exact path='/movies/characters' render={() => <CharactersContainer characters={this.state.currentCharacters}/>}/>
       </section>
     )
   }
