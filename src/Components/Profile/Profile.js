@@ -3,11 +3,11 @@ import './Profile.css';
 
 const Profile = ( { name, quote, status } ) => {
   return (
-    <div>
-      <p>{name}</p>
-      <p>{quote}</p>
-      <p>{status}</p>
-    </div>
+    <section className="profile">
+      <p><span className="bold-text">NAME </span>{name}</p>
+      <p><span className="bold-text">QUOTE </span>{quote}</p>
+      <p><span className="bold-text">STATUS </span>{status}</p>
+    </section>
   )
 }
 
