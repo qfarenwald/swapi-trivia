@@ -31,7 +31,6 @@ componentDidMount = () => {
   }
 
   render() {
-    console.log('cat', this.state.movies)
     return(
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
