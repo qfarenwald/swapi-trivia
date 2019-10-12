@@ -1,5 +1,6 @@
 import React from 'react';
 import './Menu.css';
+import { Link } from 'react-router-dom';
 
 const Menu = ( props ) => {
 
@@ -7,7 +8,7 @@ const Menu = ( props ) => {
     <nav>
       <h1><span className='yellow-text'>SW</span>API</h1>
       <p>FAVORITES</p>
-      <p onClick={() => props.removeUserState()}>LOGOUT</p>
+      <Link to='/'><p onClick={() => props.removeUserState()}>LOGOUT</p></Link>
     </nav>
   )
 }
