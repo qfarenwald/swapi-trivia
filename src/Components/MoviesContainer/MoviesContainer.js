@@ -12,6 +12,7 @@ const MoviesContainer = ( props ) => {
     key={movie.episode_id}
     characters={movie.characters}
     updateCurrentCharacters={props.updateCurrentCharacters}
+    opening_crawl={movie.opening_crawl}
     />
   })
 
