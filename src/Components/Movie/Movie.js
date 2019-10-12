@@ -1,7 +1,8 @@
 import React from 'react';
 import './Movie.css';
-import { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { getCharacterData } from '../../apiCalls/apiCalls';
 
 class Movie extends Component {
   constructor(props) {
@@ -14,15 +15,15 @@ class Movie extends Component {
 
   componentDidMount = () => {
     let fetchedCharacters = [];
-    this.props.characters.forEach((charac) => {
-      fetch(charac)
-        .then(res => res.json())
+    const characArray = this.props.characters.map((charac) => {
+      getCharacterData(charac)
         .then(character => {
           return {
             name: character.name,
-            homeworld: character.homeworld,
-            species: character.species,
-            films: character.films
+            homeworld: character.res[0].home,
+            population: character.res[0].population,
+            species: character.res[1],
+            films: character.res[2][0]
           }
         })
         .then(character => fetchedCharacters.push(character))
