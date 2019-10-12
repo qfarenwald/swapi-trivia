@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
+import Profile from '../Profile/Profile';
 import { getMovies } from '../../apiCalls/apiCalls';
 import  { Route, Link } from 'react-router-dom';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
@@ -36,9 +37,11 @@ class App extends Component {
     return(
       <section className='App'>
         <h1><span className='yellow-text'>SW</span>API</h1>
-        <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>}/>
-        <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} updateCurrentCharacters={this.updateCurrentCharacters}/>}/>
-        <Route exact path='/movies/characters' render={() => <CharactersContainer characters={this.state.currentCharacters}/>}/>
+        <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>} />
+        <Route exact path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
+        <Route exact path='/movies' render={() => <h2>MOVIES</h2>} />
+        <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} user={this.state.user} updateCurrentCharacters={this.updateCurrentCharacters}/>} />
+        <Route exact path='/movies/characters' render={() => <CharactersContainer characters={this.state.currentCharacters}/>} />
       </section>
     )
   }

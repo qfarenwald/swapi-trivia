@@ -1,5 +1,5 @@
 import React from 'react';
-import Movie from '../Movie/Movie'
+import Movie from '../Movie/Movie';
 import './MoviesContainer.css';
 
 const MoviesContainer = ( props ) => {
