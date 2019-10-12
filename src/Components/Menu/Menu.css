@@ -1,0 +1,8 @@
+.menu {
+  display: flex;
+}
+
+h1 {
+  font-size: 14rem;
+  margin: 0;
+}
