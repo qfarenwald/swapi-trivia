@@ -40,7 +40,7 @@ class Movie extends Component {
           <h4><span className="bold-text">RELEASE</span> {this.props.release_date}</h4>
         </div>
         <div className="view-charac">
-          <Link to='/movies/characters'><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters)}>VIEW CHARACTERS</h5></Link>
+          <Link to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters)}>VIEW CHARACTERS</h5></Link>
         </div>
       </section>
     )
