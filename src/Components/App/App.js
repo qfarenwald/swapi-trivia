@@ -49,7 +49,14 @@ class App extends Component {
         <Route exact path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
         <Route exact path='/movies' render={() => <h2>MOVIES</h2>} />
         <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} user={this.state.user} updateCurrentCharacters={this.updateCurrentCharacters}/>} />
-        <Route exact path='/movies/characters' render={() => <CharactersContainer characters={this.state.currentCharacters}/>} />
+        <Route exact path='/movies/:episode_id' render={() => {
+          return (
+            <div>
+              <CharactersContainer characters={this.state.currentCharacters}/> 
+            </div>
+          )
+        }}
+        />
       </section>
     )
   }
