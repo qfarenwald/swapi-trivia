@@ -9,7 +9,8 @@ export const getMovies = (moviesData) => {
             title: film.title,
             episode_id: film.episode_id,
             release_date: newDate,
-            characters: tenCharacters
+            characters: tenCharacters,
+            opening_crawl: film.opening_crawl
           }
         })
       })
