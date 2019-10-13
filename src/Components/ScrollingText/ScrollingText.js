@@ -4,15 +4,17 @@ import './ScrollingText.css';
 const ScrollingText = ( props ) => {
 
   return (
-    <section className="scrolling-text">
-      <div className="crawl">
-        <div className="title">
-          <p>Episode {props.movieData.episode_id}</p>
-          <h2>{props.movieData.title}</h2>
+    <article>
+      <section className="scrolling-text">
+        <div className="crawl">
+          <div className="title">
+           <p>Episode {props.movieData.episode_id}</p>
+            <h4 className="movie-title">{props.movieData.title}</h4>
+          </div>
+          <p>{props.movieData.opening_crawl}</p>
         </div>
-        <p>{props.movieData.opening_crawl}</p>
-      </div>
-    </section>
+      </section>
+    </article>
   )
 }
 
