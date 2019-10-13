@@ -4,7 +4,7 @@ import Characters from '../Characters/Characters'
 
 const CharactersContainer = (props) => {
   let characters = props.characters.map((character) => {
-    const index = character.url.split('/')[5]
+    const index = (character.url.split('/')[5])
     return (<Characters
       key={index}
       id={index}
@@ -14,6 +14,7 @@ const CharactersContainer = (props) => {
       films={character.films}
       population={character.population}
       updateFavoriteCharacters={props.updateFavoriteCharacters}
+      url={character.url}
     />
     )
   })
