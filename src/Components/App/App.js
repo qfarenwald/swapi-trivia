@@ -32,8 +32,8 @@ class App extends Component {
   }
 
   updateCurrentCharacters = (characters, movieData) => {
-    this.setState({ currentCharacters : characters})
-    this.setState({ currentMovie : movieData})
+    this.setState({ currentCharacters : characters});
+    this.setState({ currentMovie : movieData});
   }
 
   removeUserState = () => {
