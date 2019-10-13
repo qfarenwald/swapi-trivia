@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import Profile from '../Profile/Profile';
 import Menu from '../Menu/Menu';
+import ScrollingText from '../ScrollingText/ScrollingText';
 import  { Route, Link } from 'react-router-dom';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import { getMovies } from '../../apiCalls/apiCalls';
