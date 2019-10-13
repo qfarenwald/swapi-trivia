@@ -4,7 +4,7 @@ import './Characters.css'
 const Characters = (props) => {
   return (
     <section className="charac-card">
-      <div className="favorite">favorite</div>
+      <div className="favorite">FAVORITE</div>
       <h3>{props.name}</h3>
       <h4><span className="bold-text">SPECIES </span>{props.species}</h4>
       <h4><span className="bold-text">HOMEWORLD </span>{props.homeworld}</h4>
