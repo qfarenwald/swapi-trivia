@@ -12,6 +12,7 @@ const CharactersContainer = (props) => {
       species={character.species}
       films={character.films}
       population={character.population}
+      updateFavoriteCharacters={props.updateFavoriteCharacters}
     />
     )
   })
