@@ -8,7 +8,8 @@ class Movie extends Component {
   constructor(props) {
     super()
     this.state = {
-      characters: []
+      characters: [],
+      waitingForLoad: true
     }
     this.props = props;
     this.movieData = {
@@ -19,6 +20,7 @@ class Movie extends Component {
   }
 
   componentDidMount = () => {
+    console.log("Movie component Did Mount, Now Fetching Character Data")
     let fetchedCharacters = [];
     this.props.characters.forEach((charac) => {
       getCharacterData(charac)
@@ -32,9 +34,10 @@ class Movie extends Component {
           }
         })
         .then(character => fetchedCharacters.push(character))
+        .then(character => this.setState({ waitingForLoad: false}))
         .catch(error => console.error('error'))
     })
-    this.setState({ characters: fetchedCharacters})
+    this.setState({ characters: fetchedCharacters })
   }
 
   render() {
@@ -46,7 +49,8 @@ class Movie extends Component {
           <h4><span className="bold-text">RELEASE</span> {this.props.release_date}</h4>
         </div>
         <div className="view-charac">
-          <Link className="link" to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters, this.movieData)}>VIEW CHARACTERS</h5></Link>
+          {this.state.waitingForLoad ? 
+          <img src='https://media.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif' alt="loading..."/> : <Link className="link" to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters, this.movieData)}>VIEW CHARACTERS</h5></Link>}
         </div>
       </section>
     )
