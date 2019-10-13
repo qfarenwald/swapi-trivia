@@ -3,7 +3,6 @@ import './CharactersContainer.css';
 import Characters from '../Characters/Characters'
 
 const CharactersContainer = (props) => {
-  console.log("these are CharactersContainer  props::", props)
   let characters = props.characters.map((character, index) => {
     console.log(character)
     return (<Characters
@@ -12,12 +11,13 @@ const CharactersContainer = (props) => {
       homeworld={character.homeworld}
       species={character.species}
       films={character.films}
+      population={character.population}
     />
     )
   })
 
   return (
-    <section>
+    <section className="charac-container">
       {characters}
     </section>
   )

@@ -8,7 +8,7 @@ const Menu = ( props ) => {
     <nav className="menu">
       <h1><span className='yellow-text'>SW</span>API</h1>
       <p>FAVORITES</p>
-      <Link to='/'><p onClick={() => props.removeUserState()}>LOGOUT</p></Link>
+      <Link className="link" to='/'><p onClick={() => props.removeUserState()}>LOGOUT</p></Link>
     </nav>
   )
 }

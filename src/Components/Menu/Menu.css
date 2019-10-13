@@ -6,3 +6,7 @@ h1 {
   font-size: 14rem;
   margin: 0;
 }
+
+.link {
+  text-decoration: none;
+}

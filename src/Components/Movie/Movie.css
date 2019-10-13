@@ -34,3 +34,7 @@ h5 {
   justify-content: center;
   margin: 0 20px 20px 20px;
 }
+
+.link {
+  text-decoration: none;
+}
