@@ -4,11 +4,12 @@ import './Characters.css'
 const Characters = (props) => {
   return (
     <section className="charac-card">
-      <p>{props.name}</p>
-      <p>{props.species}</p>
-      <p>{props.homeworld}</p>
-      <p>{props.population}</p>
-      <p>{props.films}</p>
+      <div className="favorite">favorite</div>
+      <h3>{props.name}</h3>
+      <h4><span className="bold-text">SPECIES </span>{props.species}</h4>
+      <h4><span className="bold-text">HOMEWORLD </span>{props.homeworld}</h4>
+      <h4><span className="bold-text">POPULATION </span>{props.population}</h4>
+      <h4><span className="bold-text">OTHER MOVIES </span>{props.films}</h4>
     </section>
   )
 }
