@@ -5,11 +5,13 @@
   text-align: center;
 }
 
-p {
+.form-p {
+  color: #FFFFFF;
   font-size: 1rem;
 }
 
 .input-fill {
+  border: none;
   font-size: 1rem;
   text-align: center;
   margin: 10px;
