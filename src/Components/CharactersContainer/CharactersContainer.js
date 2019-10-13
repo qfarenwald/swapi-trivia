@@ -4,7 +4,8 @@ import Characters from '../Characters/Characters'
 
 const CharactersContainer = (props) => {
   let characters = props.characters.map((character, index) => {
-    console.log(character)
+    const newIndex = props.characters.url
+    console.log('newIndex', newIndex)
     return (<Characters
       key={index}
       name={character.name}
