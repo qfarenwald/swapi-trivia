@@ -52,8 +52,8 @@ class App extends Component {
   render() {
     return(
       <section className='App'>
-        <Route path='/movies' render={() => <Menu removeUserState={this.removeUserState} />} />
-        <Route exact path='/favorites' render={() => <Menu removeUserState={this.removeUserState} />} />
+        <Route path='/movies' render={() => <Menu removeUserState={this.removeUserState} favoriteCharacters={this.state.favoriteCharacters}/>} />
+        <Route exact path='/favorites' render={() => <Menu removeUserState={this.removeUserState} favoriteCharacters={this.state.favoriteCharacters}/>} />
         <Route exact path='/' render={() => <h1><span className='yellow-text'>SW</span>API</h1>} />
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>} />
         <Route path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
