@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import Profile from '../Profile/Profile';
 import Menu from '../Menu/Menu';
+import ScrollingText from '../ScrollingText/ScrollingText';
 import  { Route, Link } from 'react-router-dom';
 import CharactersContainer from '../CharactersContainer/CharactersContainer';
 import { getMovies } from '../../apiCalls/apiCalls';
@@ -31,8 +32,9 @@ class App extends Component {
     this.setState({ user: userObj })
   }
 
-  updateCurrentCharacters = (characters) => {
-    this.setState({ currentCharacters : characters})
+  updateCurrentCharacters = (characters, movieData) => {
+    this.setState({ currentCharacters : characters});
+    this.setState({ currentMovie : movieData});
   }
 
   removeUserState = () => {
@@ -49,6 +51,7 @@ class App extends Component {
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>} />
         <Route path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
         <Route exact path='/movies' render={() => <h2>EPISODES</h2>} />
+        <Route exact path='/movies/:id' render={() => <ScrollingText movieData={this.state.currentMovie}/>} />
         <Route exact path='/movies/:id' render={() => <h2>CHARACTERS</h2>} />
         <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} user={this.state.user} updateCurrentCharacters={this.updateCurrentCharacters}/>} />
         <Route exact path='/movies/:episode_id' render={() => {

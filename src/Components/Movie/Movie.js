@@ -11,11 +11,16 @@ class Movie extends Component {
       characters: []
     }
     this.props = props;
+    this.movieData = {
+      episode_id : this.props.episode_id,
+      title: this.props.title,
+      opening_crawl: this.props.opening_crawl
+    }
   }
 
   componentDidMount = () => {
     let fetchedCharacters = [];
-    const characArray = this.props.characters.map((charac) => {
+    this.props.characters.forEach((charac) => {
       getCharacterData(charac)
         .then(character => {
           return {
@@ -41,7 +46,7 @@ class Movie extends Component {
           <h4><span className="bold-text">RELEASE</span> {this.props.release_date}</h4>
         </div>
         <div className="view-charac">
-          <Link className="link" to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters)}>VIEW CHARACTERS</h5></Link>
+          <Link className="link" to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters, this.movieData)}>VIEW CHARACTERS</h5></Link>
         </div>
       </section>
     )
