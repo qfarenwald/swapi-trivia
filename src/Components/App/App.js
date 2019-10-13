@@ -47,12 +47,12 @@ class App extends Component {
         <Menu removeUserState={this.removeUserState}/>
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>} />
         <Route exact path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
-        <Route exact path='/movies' render={() => <h2>MOVIES</h2>} />
+        <Route exact path='/movies' render={() => <h2>EPISODES</h2>} />
         <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} user={this.state.user} updateCurrentCharacters={this.updateCurrentCharacters}/>} />
         <Route exact path='/movies/:episode_id' render={() => {
           return (
             <div>
-              <CharactersContainer characters={this.state.currentCharacters}/> 
+              <CharactersContainer characters={this.state.currentCharacters}/>
             </div>
           )
         }}
