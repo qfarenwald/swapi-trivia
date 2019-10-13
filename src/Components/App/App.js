@@ -45,6 +45,7 @@ class App extends Component {
     return(
       <section className='App'>
         <Menu removeUserState={this.removeUserState}/>
+        <Route exact path='/' render={() => <h1><span className='yellow-text'>SW</span>API</h1>} />
         <Route exact path='/' render={() => <Form updateUserState={this.updateUserState}/>} />
         <Route exact path='/movies' render={() => <Profile name={this.state.user.name} quote={this.state.user.quote} status={this.state.user.status}/>} />
         <Route exact path='/movies' render={() => <h2>EPISODES</h2>} />
