@@ -1,5 +1,8 @@
 .menu {
+  align-items: flex-end;
   display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
 }
 
 h1 {
@@ -9,4 +12,17 @@ h1 {
 
 .link {
   text-decoration: none;
+}
+
+.small-heading {
+  font-size: 5rem;
+}
+
+.favandlog {
+  display: flex;
+}
+
+p {
+  color: #EEDB00;
+  margin-left: 20px;
 }
