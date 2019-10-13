@@ -15,7 +15,7 @@ class Movie extends Component {
 
   componentDidMount = () => {
     let fetchedCharacters = [];
-    const characArray = this.props.characters.map((charac) => {
+    this.props.characters.forEach((charac) => {
       getCharacterData(charac)
         .then(character => {
           return {
