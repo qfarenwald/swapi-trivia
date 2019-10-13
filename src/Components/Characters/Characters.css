@@ -37,5 +37,8 @@ h5 {
 .favorite {
   background-image: url('../../images/swapi_heart_unclicked.svg');
   background-repeat: no-repeat;
+  cursor: pointer;
   height: 40px;
+  margin-left: -10px;
+  margin-bottom: 5px;
 }
