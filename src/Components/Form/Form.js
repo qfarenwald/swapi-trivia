@@ -32,7 +32,7 @@ class Form extends Component {
   render() {
     return (
       <main className="form">
-        <p style={{visibility: this.state.isValid ? 'hidden' : 'visible'}}>Please enter values for each input!</p>
+        <p className="form-p" style={{visibility: this.state.isValid ? 'hidden' : 'visible'}}>Please enter values for each input!</p>
         <input
           className="input-fill"
           type="text"

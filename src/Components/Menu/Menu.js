@@ -2,7 +2,7 @@ import React from 'react';
 import './Menu.css';
 import { Route, Link } from 'react-router-dom';
 
-const Menu = ( props ) => {
+const Menu = (props) => {
 
   return (
     <nav className="menu">
