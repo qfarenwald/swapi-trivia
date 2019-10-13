@@ -29,10 +29,17 @@ h5 {
 }
 
 .view-charac {
+  height: 60px;
   background-color: #EEDB00;
   display: flex;
   justify-content: center;
   margin: 0 20px 20px 20px;
+}
+
+.view-charac img {
+  margin-top: 5%;
+  width: 40px;
+  height: 40px;
 }
 
 .link {
