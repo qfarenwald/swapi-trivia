@@ -50,7 +50,7 @@ class Movie extends Component {
         </div>
         <div className="view-charac">
           {this.state.waitingForLoad ? 
-          <img src='https://media.giphy.com/media/3o7bu3XilJ5BOiSGic/giphy.gif' alt="loading..."/> : <Link className="link" to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters, this.movieData)}>VIEW CHARACTERS</h5></Link>}
+          <img src='https://media3.giphy.com/media/hQgJCEdGOEHa8/source.gif' alt="loading..."/> : <Link className="link" to={`movies/${this.props.episode_id}`}><h5 onClick={() => this.props.updateCurrentCharacters(this.state.characters, this.movieData)}>VIEW CHARACTERS</h5></Link>}
         </div>
       </section>
     )
