@@ -16,7 +16,6 @@ class Movie extends Component {
       title: this.props.title,
       opening_crawl: this.props.opening_crawl
     }
-    console.log(this.movieData);
   }
 
   componentDidMount = () => {

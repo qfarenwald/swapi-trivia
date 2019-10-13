@@ -7,12 +7,11 @@ const ScrollingText = ( props ) => {
     <section className="scrolling-text">
       <div className="crawl">
         <div className="title">
-          <p>{this.props.episode_id}</p>
-          <h1>{this.props.title}</h1>
+          <p>Episode {props.movieData.episode_id}</p>
+          <h2>{props.movieData.title}</h2>
         </div>
-        <p>{this.props.opening_crawl}</p>
+        <p>{props.movieData.opening_crawl}</p>
       </div>
-      
     </section>
   )
 }
