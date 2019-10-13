@@ -34,8 +34,12 @@ class Movie extends Component {
             url: charac
           }
         })
-        .then(character => fetchedCharacters.push(character))
-        .then(character => this.setState({ waitingForLoad: false}))
+        .then(character => {
+          fetchedCharacters.push(character)
+          if (fetchedCharacters.length === 9) {
+            this.setState({ waitingForLoad: false})
+          }
+        })
         .catch(error => console.error('error'))
     })
     this.setState({ characters: fetchedCharacters })
