@@ -36,13 +36,17 @@ class Movie extends Component {
         })
         .then(character => {
           fetchedCharacters.push(character)
-          if (this.state.characters.length === 9) {
-            this.setState({ waitingForLoad: false})
+          if (fetchedCharacters.length === 10) {
+            setInterval(() => {
+              this.setState({ waitingForLoad: false}) 
+            }, 500);
           }
         })
         .catch(error => console.error('error'))
     })
-    this.setState({ characters: fetchedCharacters })
+    this.setState({ 
+      characters: fetchedCharacters 
+    })
   }
 
   render() {
