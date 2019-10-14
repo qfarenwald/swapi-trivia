@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match the snapshot 1`] = `
+<main
+  className="form"
+>
+  <p
+    className="form-p"
+    style={
+      Object {
+        "visibility": "visible",
+      }
+    }
+  >
+    Please enter values for each input!
+  </p>
+  <input
+    className="input-fill"
+    name="name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="input-fill"
+    name="quote"
+    onChange={[Function]}
+    placeholder="Favorite Quote"
+    type="text"
+    value=""
+  />
+  <div
+    className="input-container"
+  >
+    <label
+      className="input-radio"
+    >
+      <input
+        name="status"
+        onChange={[Function]}
+        type="radio"
+        value="PADAWAN"
+      />
+       PADAWAN
+      <span
+        className="checkmark"
+      />
+    </label>
+    <label
+      className="input-radio"
+    >
+      <input
+        name="status"
+        onChange={[Function]}
+        type="radio"
+        value="JEDI"
+      />
+       JEDI
+      <span
+        className="checkmark"
+      />
+    </label>
+    <label
+      className="input-radio"
+    >
+      <input
+        name="status"
+        onChange={[Function]}
+        type="radio"
+        value="YODA"
+      />
+       YODA
+      <span
+        className="checkmark"
+      />
+    </label>
+  </div>
+  <Link
+    to="/"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </Link>
+</main>
+`;
