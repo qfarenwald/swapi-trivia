@@ -36,7 +36,7 @@ class Movie extends Component {
         })
         .then(character => {
           fetchedCharacters.push(character)
-          if (fetchedCharacters.length === 9) {
+          if (this.state.characters.length === 9) {
             this.setState({ waitingForLoad: false})
           }
         })

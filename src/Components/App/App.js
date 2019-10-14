@@ -38,10 +38,22 @@ class App extends Component {
   }
 
   updateFavoriteCharacters = (character) => {
-    const favCharacArray = [...this.state.favoriteCharacters]
-    favCharacArray.push(character)
-    this.setState({ favoriteCharacters: favCharacArray })
-  }
+    let safeToAdd = true;
+    this.state.favoriteCharacters.forEach((favorite, index) => {
+      if (favorite.id === character.id) {
+        console.log("DUPLICATE FAVORITE DETECTED!!!")
+        safeToAdd = false;
+        let favchars = this.state.favoriteCharacters;
+        favchars.splice(index, 1);
+        this.setState( { favoriteCharacters: favchars})
+      }
+    });
+    if (safeToAdd === true) {
+      const favCharacArray = [...this.state.favoriteCharacters]
+      favCharacArray.push(character)
+      this.setState({ favoriteCharacters: favCharacArray })
+    }
+  } 
 
   removeUserState = () => {
     this.setState({
