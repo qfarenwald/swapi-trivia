@@ -15,6 +15,7 @@ const CharactersContainer = (props) => {
       population={character.population}
       updateFavoriteCharacters={props.updateFavoriteCharacters}
       url={character.url}
+      isFavorite={props.favorites}
     />
     )
   })

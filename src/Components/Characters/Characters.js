@@ -4,17 +4,18 @@ import './Characters.css'
 import { isProperty } from '@babel/types';
 
 class Characters extends Component {
-  constructor(){
+  constructor(props){
     super()
+    this.props = props
     this.state = {
-      isFavorited: false
+      isFavorited: this.props.isFavorite
     }
   }
 
   render() {
     return (
       <section className="charac-card">
-        <div className="unfavorite" onClick={() => {
+        <div className={this.state.isFavorited ? 'favorite' : 'unfavorite'} onClick={() => {
           this.props.updateFavoriteCharacters(this.props)
           this.state.isFavorited ? this.setState({ isFavorited: false}) : this.setState({ isFavorited: true})
           }}>

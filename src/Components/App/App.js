@@ -75,11 +75,11 @@ class App extends Component {
         <Route exact path='/movies/:id' render={() => <h2>CHARACTERS</h2>} />
         <Route exact path='/movies' render={() => <MoviesContainer movies={this.state.movies} user={this.state.user} updateCurrentCharacters={this.updateCurrentCharacters}/>} />
         <Route exact path='/favorites' render={() => <h2>FAVORITES</h2>} />
-        <Route exact path='/favorites' render={() => <CharactersContainer characters={this.state.favoriteCharacters} updateFavoriteCharacters={this.updateFavoriteCharacters}/>} />
+        <Route exact path='/favorites' render={() => <CharactersContainer characters={this.state.favoriteCharacters} updateFavoriteCharacters={this.updateFavoriteCharacters} favorites={true}/>} />
         <Route exact path='/movies/:episode_id' render={() => {
           return (
             <div>
-              <CharactersContainer characters={this.state.currentCharacters} updateFavoriteCharacters={this.updateFavoriteCharacters}/>
+              <CharactersContainer characters={this.state.currentCharacters} updateFavoriteCharacters={this.updateFavoriteCharacters} favorites={false}/>
             </div>
           )
         }}
