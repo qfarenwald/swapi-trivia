@@ -14,7 +14,7 @@ class Characters extends Component {
   render() {
     return (
       <section className="charac-card">
-        <div className="favorite" onClick={() => {
+        <div className="unfavorite" onClick={() => {
           this.props.updateFavoriteCharacters(this.props)
           this.state.isFavorited ? this.setState({ isFavorited: false}) : this.setState({ isFavorited: true})
           }}>
