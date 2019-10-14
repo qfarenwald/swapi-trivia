@@ -16,6 +16,7 @@ const CharactersContainer = (props) => {
       updateFavoriteCharacters={props.updateFavoriteCharacters}
       url={character.url}
       isFavorite={props.favorites}
+      checkFavoriteStatus={props.checkFavoriteStatus}
     />
     )
   })

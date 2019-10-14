@@ -8,7 +8,7 @@ class Characters extends Component {
     super()
     this.props = props
     this.state = {
-      isFavorited: this.props.isFavorite
+      isFavorited: this.props.checkFavoriteStatus(this.props)
     }
   }
 
