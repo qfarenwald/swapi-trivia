@@ -7,6 +7,7 @@ class Characters extends Component {
   constructor(){
     super()
     this.state = {
+      isFavorited: false
     }
   }
 
@@ -15,7 +16,7 @@ class Characters extends Component {
       <section className="charac-card">
         <div className="favorite" onClick={() => {
           this.props.updateFavoriteCharacters(this.props)
-          // props.isFavorited ? props.isFavorited = false : props.isFavorited = true
+          this.state.isFavorited ? this.setState({ isFavorited: false}) : this.setState({ isFavorited: true})
           }}>
         </div>
         <h3>{this.props.name}</h3>
