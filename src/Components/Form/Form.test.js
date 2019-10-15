@@ -17,7 +17,6 @@ describe('Form', () => {
     const wrapper = shallow(<Form
         updateUserState={mockFunction}
       />);
-
     const inputEvent = {
       target: {
         name: 'name', value: 'Mike'
@@ -68,15 +67,12 @@ describe('Form', () => {
     const wrapper = shallow(<Form
         updateUserState={mockFunction}
       />);
-
     const inputEvent = {
       target: {
         name: 'quote', value: 'Hey'
       }
     }
-
     const mockErrorHandling = jest.fn()
-
     wrapper.instance().errorHandling = jest.fn()
 
     wrapper.instance().updateFormState(inputEvent);
@@ -154,12 +150,55 @@ describe('Form', () => {
       }
     }
 
-    wrapper.setState(mockState);
-    wrapper.instance().updateFormState(inputName);
-    wrapper.instance().updateFormState(inputStatus);
-    wrapper.instance().errorHandling();
+      wrapper.setState(mockState);
+      wrapper.instance().updateFormState(inputName);
+      wrapper.instance().updateFormState(inputStatus);
+      wrapper.instance().errorHandling();
 
-    expect(wrapper.state('isValid')).toEqual(false);
-  })
+      expect(wrapper.state('isValid')).toEqual(false);
+    })
+
+    // it('should call updateUserState from props when errorHandling is called', () => {
+    //   const mockFunction = jest.fn()
+    //   const wrapper = shallow(<Form
+    //       updateUserState={mockFunction}
+    //     />);
+    //   const mockState = {
+    //     name: '',
+    //     quote: '',
+    //     status: '',
+    //     isValid: false
+    //   }
+    //   const expectState = {
+    //     name: 'Mike',
+    //     quote: 'Hey',
+    //     status: 'Cool',
+    //     isValid: true
+    //   }
+    //   const inputName = {
+    //     target: {
+    //       name: 'name', value: 'Mike'
+    //     }
+    //   }
+    //   const inputQuote = {
+    //     target: {
+    //       name: 'quote', value: 'Hey'
+    //     }
+    //   }
+    //   const inputStatus = {
+    //     target: {
+    //       name: 'status', value: 'YODA'
+    //     }
+    //   }
+    //   const mockUpdateUserState = jest.fn();
+    //
+    //   wrapper.setState(mockState);
+    //   wrapper.instance().updateFormState(inputName);
+    //   wrapper.instance().updateFormState(inputQuote);
+    //   wrapper.instance().updateFormState(inputStatus);
+    //   wrapper.instance().errorHandling();
+    //
+    //   expect(mockUpdateUserState).toHaveBeenCalled();
+    // })
 
 });
