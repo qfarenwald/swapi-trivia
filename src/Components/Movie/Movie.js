@@ -3,6 +3,7 @@ import './Movie.css';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getCharacterData } from '../../apiCalls/apiCalls';
+import PropTypes from 'prop-types';
 
 class Movie extends Component {
   constructor(props) {
@@ -66,3 +67,13 @@ class Movie extends Component {
 }
 
 export default Movie;
+
+Movie.propTypes = {
+  title: PropTypes.string,
+  episode_id: PropTypes.number,
+  release_date: PropTypes.string,
+  id: PropTypes.number,
+  characters: PropTypes.array,
+  updateCurrentCharacters: PropTypes.func,
+  opening_crawl: PropTypes.string,
+}
