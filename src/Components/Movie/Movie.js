@@ -37,6 +37,7 @@ class Movie extends Component {
         .then(character => {
           fetchedCharacters.push(character)
           if (fetchedCharacters.length === 10) {
+            this.setState({ characters: fetchedCharacters})
             setInterval(() => {
               this.setState({ waitingForLoad: false}) 
             }, 1500);
@@ -44,9 +45,10 @@ class Movie extends Component {
         })
         .catch(error => console.error('error'))
     })
-    this.setState({ 
-      characters: fetchedCharacters 
-    })
+    // this.setState({ 
+    //   characters: fetchedCharacters 
+    // }, () => {
+    //   if (this.state.characters.length !== 0) {console.log("SET STATE RESOLVED")}})
   }
 
   render() {
