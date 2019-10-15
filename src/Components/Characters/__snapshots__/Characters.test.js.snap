@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Characters should match snapshot with proper data 1`] = `
+<section
+  className="charac-card"
+>
+  <div
+    className="unfavorite"
+    onClick={[Function]}
+  />
+  <h3>
+    Mike
+  </h3>
+  <h4>
+    <span
+      className="bold-text"
+    >
+      SPECIES 
+    </span>
+    Boss
+  </h4>
+  <h4>
+    <span
+      className="bold-text"
+    >
+      HOMEWORLD 
+    </span>
+    Turing
+  </h4>
+  <h4>
+    <span
+      className="bold-text"
+    >
+      POPULATION 
+    </span>
+    30
+  </h4>
+  <h4>
+    <span
+      className="bold-text"
+    >
+      OTHER MOVIES 
+    </span>
+    Life In A Basement
+  </h4>
+</section>
+`;
