@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile should match the snapshot with correct data 1`] = `
+<section
+  className="profile"
+>
+  <p
+    className="profile-p"
+  >
+    <span
+      className="bold-text"
+    >
+      NAME 
+    </span>
+    Mike
+  </p>
+  <p
+    className="profile-p"
+  >
+    <span
+      className="bold-text"
+    >
+      QUOTE 
+    </span>
+    Hey
+  </p>
+  <p
+    className="profile-p"
+  >
+    <span
+      className="bold-text"
+    >
+      STATUS 
+    </span>
+    YODA
+  </p>
+</section>
+`;
