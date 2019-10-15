@@ -63,21 +63,24 @@ describe('Form', () => {
     expect(wrapper.state('status')).toEqual(inputEvent.target.value)
   })
 
-  // it('should call errorHandling when updateFormState is called', () => {
-  //   const mockFunction = jest.fn()
-  //   const wrapper = shallow(<Form
-  //       updateUserState={mockFunction}
-  //     />);
-  //
-  //   const mockEvent = {
-  //     preventDefault: jest.fn()
-  //   }
-  //
-  //   const mockErrorHandling = jest.fn()
-  //
-  //   wrapper.instance().submitSearch(mockEvent);
-  //
-  //   expect(wrapper.instance().errorHandling).toHaveBeenCalled();
-  //
-  // })
+  it('should call errorHandling when updateFormState is called', () => {
+    const mockFunction = jest.fn()
+    const wrapper = shallow(<Form
+        updateUserState={mockFunction}
+      />);
+
+    const inputEvent = {
+      target: {
+        name: 'quote', value: 'Hey'
+      }
+    }
+
+    const mockErrorHandling = jest.fn()
+
+    wrapper.instance().errorHandling = jest.fn()
+
+    wrapper.instance().updateFormState(inputEvent);
+
+    expect(wrapper.instance().errorHandling).toHaveBeenCalled();
+  })
 });
