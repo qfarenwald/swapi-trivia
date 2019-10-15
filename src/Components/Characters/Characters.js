@@ -1,7 +1,6 @@
 import React from 'react'
 import { Component } from 'react';
 import './Characters.css'
-import { isProperty } from '@babel/types';
 
 class Characters extends Component {
   constructor(props){
