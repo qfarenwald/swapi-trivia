@@ -1,6 +1,7 @@
 import React from 'react';
 import Movie from '../Movie/Movie';
 import './MoviesContainer.css';
+import PropTypes from 'prop-types';
 
 const MoviesContainer = ( props ) => {
 
@@ -25,3 +26,9 @@ const MoviesContainer = ( props ) => {
 }
 
 export default MoviesContainer;
+
+MoviesContainer.propTypes = {
+  movies: PropTypes.array,
+  user: PropTypes.object,
+  updateCurrentCharacters: PropTypes.func
+}
