@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Should match the snapshot 1`] = `
+<nav
+  className="menu"
+>
+  <Route
+    path="/movies"
+    render={[Function]}
+  />
+  <Route
+    path="/favorites"
+    render={[Function]}
+  />
+  <div
+    className="favandlog"
+  >
+    <Route
+      path="/movies"
+      render={[Function]}
+    />
+    <Route
+      path="/favorites"
+      render={[Function]}
+    />
+    <Route
+      path="/movies"
+      render={[Function]}
+    />
+    <Route
+      path="/favorites"
+      render={[Function]}
+    />
+  </div>
+</nav>
+`;
