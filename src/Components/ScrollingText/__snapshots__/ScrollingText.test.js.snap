@@ -13,7 +13,7 @@ exports[`Scrolling Text Should match the snapshot 1`] = `
       >
         <p>
           Episode 
-          4
+          IV
         </p>
         <h4
           className="movie-title"

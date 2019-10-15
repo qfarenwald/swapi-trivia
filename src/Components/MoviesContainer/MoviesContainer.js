@@ -3,6 +3,7 @@ import Movie from '../Movie/Movie';
 import './MoviesContainer.css';
 
 const MoviesContainer = ( props ) => {
+
   const moviesCont = props.movies.map((movie) => {
     return <Movie
     title={movie.title}

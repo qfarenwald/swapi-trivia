@@ -24,6 +24,7 @@ class App extends Component {
 
   componentDidMount = () => {
    getMovies('https://swapi.co/api/films/')
+     .then(films => films.sort((a, b) => parseInt(a.episode_id) - parseInt(b.episode_id)))
      .then(films => this.setState({movies: films}))
      .catch(error => console.error('error'))
   }
