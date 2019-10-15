@@ -25,4 +25,16 @@ describe('App', () => {
     expect(wrapper.state('user')).toEqual(mockUserObj);
   })
 
+  it('should update user with currentCharacters and currentMovie Data', () => {
+    const wrapper = shallow(<App />);
+
+    const characters = [{name: 'Quinn'}, {name: 'Mike'}];
+    const movieData = [{episode: 'I'}, {episode: 'IV'}];
+
+    wrapper.instance().updateCurrentCharacters(characters, movieData);
+
+    expect(wrapper.state('currentCharacters')).toEqual(characters);
+    expect(wrapper.state('currentMovie')).toEqual(movieData);
+  })
+
 })
