@@ -38,7 +38,7 @@ class Movie extends Component {
           if (fetchedCharacters.length === 10) {
             setInterval(() => {
               this.setState({ waitingForLoad: false}) 
-            }, 1250);
+            }, 1500);
           }
         })
         .catch(error => console.error('error'))

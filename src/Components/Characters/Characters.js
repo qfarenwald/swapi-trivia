@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { Component } from 'react';
-import './Characters.css'
+import './Characters.css';
+import PropTypes from 'prop-types';
 
 class Characters extends Component {
   constructor(props){
@@ -30,3 +31,16 @@ class Characters extends Component {
 }
 
 export default Characters;
+
+Characters.propTypes = {
+  name: PropTypes.string,
+  id: PropTypes.string,
+  homeworld: PropTypes.string,
+  species: PropTypes.string,
+  films: PropTypes.string,
+  population: PropTypes.string,
+  updateFavoriteCharacters: PropTypes.func,
+  url: PropTypes.string,
+  isFavorite: PropTypes.bool,
+  checkFavoriteStatus: PropTypes.func,
+}
