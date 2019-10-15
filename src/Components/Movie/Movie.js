@@ -20,7 +20,6 @@ class Movie extends Component {
   }
 
   componentDidMount = () => {
-    console.log("Movie component Did Mount, Now Fetching Character Data")
     let fetchedCharacters = [];
     this.props.characters.forEach((charac) => {
       getCharacterData(charac)
@@ -39,7 +38,7 @@ class Movie extends Component {
           if (fetchedCharacters.length === 10) {
             setInterval(() => {
               this.setState({ waitingForLoad: false}) 
-            }, 500);
+            }, 1250);
           }
         })
         .catch(error => console.error('error'))
