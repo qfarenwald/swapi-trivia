@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SWAPI
 
-## Available Scripts
+SWAPI is a React App based around the Star Wars API that displays different categories of star wars data, starting with movies, then diving deeper into 10 characters for that movie. Users are able to favorite their favorite characters and view them on a favorites page.
 
-In the project directory, you can run:
+### Focuses
 
-### `npm start`
+Write squeaky clean, well refactored code using ES6 syntax.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Create a user-friendly application.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Keep state based components to a minimum and leverage more functional components.
 
-### `npm test`
+Use a modular architecture for file structure.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Properly use React Lifecycle Methods.
 
-### `npm run build`
+Become familiar with promises, nested fetch requests, and handling the UI based on acceptance of data.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Become familiar with routing and how to handle dynamic routes.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Use propTypes for every component receiving props.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Write tests for React components and asynchronous functionality.
 
-### `npm run eject`
+### Screenshots
+Homepage/User Form: User must input name, quote, and select a level before they can submit the form.
+![SWAPI homepage](src/images/swapi_form.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Movies Page that user sees after logging in: As movie data loads 'VIEW CHARACTERS' button become available.
+![SWAPI movies loading](src/images/swapi_movies-loading.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Characters Page user sees after clicking 'VIEW CHARACTERS': The crawl text for the movie will scroll upward as user reviews the character data and favorites characters by clicking on the heart.
+![SWAPI movies loading](src/images/swapi_characters.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Favorites Page that user sees after clicking 'FAVORITES' at the top right of the screen: Characters can be unfavored and favored and will be simultaneously added and removed visually from this page.
+![SWAPI movies loading](src/images/swapi_favorites.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Tech
 
-## Learn More
+This project was bootstrapped with Create React App.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tested with Jest/Enzyme.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Links using React Router.
 
-### Code Splitting
+### Team
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Quinne Farenwald (https://github.com/qfarenwald)
 
-### Analyzing the Bundle Size
+Michael Schneider (https://github.com/mschneider247)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Set Up
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Clone repo.
+```
+git clone https://github.com/qfarenwald/swapi-trivia.git
+```
+Install dependencies.
+```
+npm install
+```
+Run browser.
+```
+npm start
+```
