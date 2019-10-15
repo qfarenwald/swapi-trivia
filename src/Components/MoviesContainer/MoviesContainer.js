@@ -18,9 +18,16 @@ const MoviesContainer = ( props ) => {
     />
   })
 
+  let returnRender;
+  if (props.movies.length === 7) {
+    returnRender = moviesCont
+  } else {
+    returnRender = <img src='https://media3.giphy.com/media/hQgJCEdGOEHa8/source.gif' alt="loading..."/>
+  }
+
   return (
     <main className="movies-container">
-      {moviesCont}
+      {returnRender}
     </main>
   )
 }
