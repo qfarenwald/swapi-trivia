@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-   getMovies('https://swapi.co/api/films/')
+   getMovies()
      .then(films => films.sort((a, b) => parseInt(a.episode_id) - parseInt(b.episode_id)))
      .then(films => this.setState({movies: films}))
      .catch(error => console.error('error'))
@@ -42,7 +42,6 @@ class App extends Component {
     let safeToAdd = true;
     this.state.favoriteCharacters.forEach((favorite, index) => {
       if (favorite.id === character.id) {
-        console.log("DUPLICATE FAVORITE DETECTED!!!")
         safeToAdd = false;
         let favchars = this.state.favoriteCharacters;
         favchars.splice(index, 1);

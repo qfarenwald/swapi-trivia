@@ -3,7 +3,6 @@ import './Menu.css';
 import { Route, Link } from 'react-router-dom';
 
 const Menu = (props) => {
-  console.log('menu props', props)
 
   return (
     <nav className="menu">
