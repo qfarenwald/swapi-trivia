@@ -26,7 +26,27 @@ describe('Characters', () => {
   })
 
   it('should call updateFavoriteCharacters on click', () => {
-    
+    const mockUpdateFavoriteCharacters = jest.fn()
+    const mockCheckFavoriteStatus = jest.fn()
+    const wrapper = shallow(<
+      Characters
+        key={1}
+        id={1}
+        name="Mike"
+        homeworld="Turing"
+        species="Boss"
+        films="Life In A Basement"
+        population={30}
+        updateFavoriteCharacters={mockUpdateFavoriteCharacters}
+        url="www.turing.io"
+        isFavorite={true}
+        checkFavoriteStatus={mockCheckFavoriteStatus}
+      />)
+
+    wrapper.find('div').simulate('click')
+
+    expect(mockUpdateFavoriteCharacters).toHaveBeenCalled();
+
   })
 
 })
