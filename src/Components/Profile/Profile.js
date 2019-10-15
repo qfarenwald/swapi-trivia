@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import PropTypes from 'prop-types';
 
 const Profile = ( { name, quote, status } ) => {
   return (
@@ -12,3 +13,9 @@ const Profile = ( { name, quote, status } ) => {
 }
 
 export default Profile;
+
+Profile.propTypes = {
+  name: PropTypes.string,
+  quote: PropTypes.string,
+  status: PropTypes.string
+}

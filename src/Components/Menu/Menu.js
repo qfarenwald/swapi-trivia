@@ -1,6 +1,7 @@
 import React from 'react';
 import './Menu.css';
 import { Route, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Menu = (props) => {
 
@@ -19,3 +20,8 @@ const Menu = (props) => {
 }
 
 export default Menu;
+
+Menu.propTypes = {
+  removeUserState: PropTypes.func,
+  favoriteCharacters: PropTypes.array,
+}

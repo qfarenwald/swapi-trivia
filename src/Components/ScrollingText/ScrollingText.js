@@ -1,5 +1,6 @@
 import React from 'react';
 import './ScrollingText.css';
+import PropTypes from 'prop-types';
 
 const ScrollingText = ( props ) => {
   let romanNumerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
@@ -21,3 +22,7 @@ const ScrollingText = ( props ) => {
 }
 
 export default ScrollingText;
+
+ScrollingText.propTypes = {
+  moveData: PropTypes.object
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Form.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
   constructor(props) {
@@ -70,3 +71,7 @@ class Form extends Component {
 }
 
 export default Form;
+
+Form.propTypes = {
+  updateUserState: PropTypes.func,
+}

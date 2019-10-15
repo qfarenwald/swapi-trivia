@@ -1,6 +1,7 @@
 import React from 'react'
 import './CharactersContainer.css';
 import Characters from '../Characters/Characters'
+import PropTypes from 'prop-types';
 
 const CharactersContainer = (props) => {
   let characters = props.characters.map((character) => {
@@ -35,3 +36,10 @@ const CharactersContainer = (props) => {
 }
 
 export default CharactersContainer;
+
+CharactersContainer.propTypes = {
+  characters: PropTypes.array,
+  updateFavoriteCharacters: PropTypes.func,
+  favorites: PropTypes.bool,
+  checkFavoriteStatus: PropTypes.func,
+}
