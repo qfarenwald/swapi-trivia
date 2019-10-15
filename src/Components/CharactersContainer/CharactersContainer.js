@@ -23,7 +23,12 @@ const CharactersContainer = (props) => {
 
   return (
     <section className="charac-container">
-      {characters.length === 0 ? <p className="favorite-que">Favorite characters 💛 to see them here! </p> : null}
+      {characters.length === 0 ? 
+      <div className="prompt">
+        <p className="favorite-que">Favorite characters</p>
+        <div className="heart"></div>
+        <p className="favorite-que">to see them here!</p>
+      </div> : null}
       {characters}
     </section>
   )

@@ -6,7 +6,20 @@
 }
 
 .favorite-que {
-  margin-top: 5%;
+  margin-left: 0;
   color: white;
-  font-size: 2vw;
+  font-size: 1.5rem;
+}
+
+.prompt {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  display: inline-block;
+  background-image: url('../../images/swapi_heart_unclicked.svg');
+  background-repeat: no-repeat;
+  height: 43px;
+  width: 53px;
 }
