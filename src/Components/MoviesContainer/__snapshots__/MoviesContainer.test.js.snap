@@ -4,19 +4,9 @@ exports[`MoviesContainer should match snapshot with correct data 1`] = `
 <main
   className="movies-container"
 >
-  <Movie
-    episode_id={4}
-    id={4}
-    key="4"
-    release_date={1977}
-    title="A New Hope"
-  />
-  <Movie
-    episode_id={2}
-    id={2}
-    key="2"
-    release_date={2002}
-    title="Attack Of The Clones"
+  <img
+    alt="loading..."
+    src="https://media3.giphy.com/media/hQgJCEdGOEHa8/source.gif"
   />
 </main>
 `;
