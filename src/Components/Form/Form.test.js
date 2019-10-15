@@ -126,4 +126,40 @@ describe('Form', () => {
     expect(wrapper.state('isValid')).toEqual(true);
   })
 
+  it('should set isValid in state to false when errorHandling is called', () => {
+    const mockFunction = jest.fn()
+    const wrapper = shallow(<Form
+        updateUserState={mockFunction}
+      />);
+    const mockState = {
+      name: '',
+      quote: '',
+      status: '',
+      isValid: false
+    }
+    const expectState = {
+      name: 'Mike',
+      quote: '',
+      status: 'Cool',
+      isValid: false
+    }
+    const inputName = {
+      target: {
+        name: 'name', value: 'Mike'
+      }
+    }
+    const inputStatus = {
+      target: {
+        name: 'status', value: 'YODA'
+      }
+    }
+
+    wrapper.setState(mockState);
+    wrapper.instance().updateFormState(inputName);
+    wrapper.instance().updateFormState(inputStatus);
+    wrapper.instance().errorHandling();
+
+    expect(wrapper.state('isValid')).toEqual(false);
+  })
+
 });
