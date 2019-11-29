@@ -4,50 +4,70 @@ SWAPI is a React App based around the Star Wars API that displays different cate
 
 ### Focuses
 
-Write squeaky clean, well refactored code using ES6 syntax.
+- Write squeaky clean, well refactored code using ES6 syntax.
 
-Create a user-friendly application.
+- Create a user-friendly application.
 
-Keep state based components to a minimum and leverage more functional components.
+- Keep state based components to a minimum and leverage more functional components.
 
-Use a modular architecture for file structure.
+- Use a modular architecture for file structure.
 
-Properly use React Lifecycle Methods.
+- Properly use React Lifecycle Methods.
 
-Become familiar with promises, nested fetch requests, and handling the UI based on acceptance of data.
+- Become familiar with promises, nested fetch requests, and handling the UI based on acceptance of data.
 
-Become familiar with routing and how to handle dynamic routes.
+- Become familiar with routing and how to handle dynamic routes.
 
-Use propTypes for every component receiving props.
+- Use propTypes for every component receiving props.
 
-Write tests for React components and asynchronous functionality.
+- Write tests for React components and asynchronous functionality.
 
 ### Screenshots
-Homepage/User Form: User must input name, quote, and select a level before they can submit the form.
+
+Data Map
+- To begin, the overall data flow and necessary components are mapped out.
+
+![SWAPI data map](src/images/swapi_map.png)
+
+InVision Prototype
+- Next, a design is implemented and basic user flow is considered.
+
+- Here is a clickable InVision Prototype
+https://projects.invisionapp.com/prototype/ck1hauuu100672q011ym8hput/play
+
+Homepage/User Form
+- User must input name, quote, and select a level before they can submit the form.
+
 ![SWAPI homepage](src/images/swapi_form.png)
 
-Movies Page that user sees after logging in: As movie data loads 'VIEW CHARACTERS' button become available.
+Movies Page
+- After the user logs in, as movie data loads 'VIEW CHARACTERS' button become available.
+
 ![SWAPI movies loading](src/images/swapi_movies-loading.png)
 
-Characters Page user sees after clicking 'VIEW CHARACTERS': The crawl text for the movie will scroll upward as user reviews the character data and favorites characters by clicking on the heart.
+Characters Page
+- After the user clicks 'VIEW CHARACTERS', the crawl text for the movie will scroll upward as user reviews the character data and favorites characters by clicking on the heart.
+
 ![SWAPI movies loading](src/images/swapi_characters.png)
 
-Favorites Page that user sees after clicking 'FAVORITES' at the top right of the screen: Characters can be unfavored and favored and will be simultaneously added and removed visually from this page.
+Favorites Page
+- The user can click 'FAVORITES' at the top right of the screen and characters can be unfavored and favored and will be simultaneously added and removed visually from this page.
+
 ![SWAPI movies loading](src/images/swapi_favorites.png)
 
 ### Tech
 
-This project was bootstrapped with Create React App.
+- This project was bootstrapped with Create React App.
 
-Tested with Jest/Enzyme.
+- Tested with Jest/Enzyme.
 
-Links using React Router.
+- Links using React Router.
 
 ### Team
 
-Quinne Farenwald (https://github.com/qfarenwald)
+- Quinne Farenwald (https://github.com/qfarenwald)
 
-Michael Schneider (https://github.com/mschneider247)
+- Michael Schneider (https://github.com/mschneider247)
 
 ### Set Up
 
